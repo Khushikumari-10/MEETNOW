@@ -3,13 +3,14 @@ import axios from "axios"; // HTTP client for making requests
 import httpStatus from "http-status"; // HTTP status codes utility
 import { createContext, useContext, useState } from "react"; // React hooks
 import { useNavigate } from "react-router-dom"; // Routing navigation hook
+import server from "../environment";
 
 // Creating an authentication context with empty default value
 export const AuthContext = createContext({});
 
 // Creating an axios client instance with base URL
 const client = axios.create({
-    baseURL: `http://localhost:8080/api/v1/users` // Base URL for API endpoints
+    baseURL: `${server}/api/v1/users` // Base URL for API endpoints
 });
 
 // AuthProvider component that will wrap the application to provide auth functionality

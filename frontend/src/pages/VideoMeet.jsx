@@ -13,9 +13,10 @@ import StopScreenShareIcon from '@mui/icons-material/StopScreenShare';
 import ChatIcon from '@mui/icons-material/Chat';
 import { Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import server from "../environment";
 
 // Server configuration for socket.io connection
-const server_url = "http://localhost:8080";
+const server_url = server;
 
 // Object to store all active peer connections
 var connections = {};
